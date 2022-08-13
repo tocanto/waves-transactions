@@ -1,0 +1,7 @@
+{
+  "name": "Waves Transactions",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
