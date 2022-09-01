@@ -1,0 +1,26 @@
+/*
+.loggedIn {
+    display: none;
+}
+*/
+
+.waves__logo {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+.boton .native-input.sc-ion-input-md {
+	width: 75px !important;
+	background-color: white;
+	margin: 0 12px 0 -14px;
+	color: black;
+}
+
+.activo {
+    display: none;
+}

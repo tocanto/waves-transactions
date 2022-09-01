@@ -1,8 +1,10 @@
 {
   "name": "waves-transactions",
+  "homepage": "https://tocanto.dev/MassTransfer",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "4.0.1",
     "@capacitor/app": "4.0.1",
     "@capacitor/core": "4.0.1",
     "@capacitor/haptics": "4.0.1",
@@ -19,6 +21,13 @@
     "@types/react-dom": "^16.9.10",
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
+    "@waves.exchange/provider-cloud": "^1.0.2",
+    "@waves.exchange/provider-web": "^1.1.6",
+    "@waves/provider-keeper": "^0.3.1",
+    "@waves/provider-seed": "^0.3.2",
+    "@waves/signer": "^1.0.11",
+    "@waves/waves-transactions": "^4.2.10",
+    "base58-encode": "^0.2.0",
     "ionicons": "^5.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -42,7 +51,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "INLINE_RUNTIME_CHUNK=false react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(@ionic/react|@ionic/react-router|@ionic/core|@stencil/core|ionicons)/)'",
     "eject": "react-scripts eject"
   },
@@ -67,5 +76,5 @@
   "devDependencies": {
     "@capacitor/cli": "4.0.1"
   },
-  "description": "An Ionic project"
+  "description": "Transactions on Waves Blockchain"
 }
