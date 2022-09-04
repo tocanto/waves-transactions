@@ -13,7 +13,7 @@ import {
 
 import { useLocation } from 'react-router-dom';
 //import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
-import { sendOutline, sendSharp } from 'ionicons/icons';
+import { sendOutline, sendSharp, shieldOutline, shieldSharp } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -24,6 +24,12 @@ interface AppPage {
 }
 
 const appPages: AppPage[] = [
+  {
+    title: 'Keeper Swap Widget',
+    url: '/KeeperSwap',
+    iosIcon: shieldOutline,
+    mdIcon: shieldSharp
+  },
   {
     title: 'Mass Transfer',
     url: '/MassTransfer',
@@ -48,6 +54,7 @@ const Menu: React.FC = () => {
               slot="end"
               name="darkMode"
               onIonChange={toggleDarkModeHandler}
+              checked={true}
             />
           </IonItem>
           </IonListHeader>

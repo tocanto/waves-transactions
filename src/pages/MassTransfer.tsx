@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { IonButtons, IonButton, IonContent, IonModal, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonIcon, useIonToast, IonList, IonItemDivider, IonInput, IonItem, IonLabel, IonGrid, IonRow, IonCol, IonRadioGroup, IonRadio, IonListHeader } from '@ionic/react';
-import { useParams } from 'react-router';
+//import { useParams } from 'react-router';
 //import ExploreContainer from '../components/ExploreContainer';
 import './MassTransfer.css';
 import { hourglassOutline, hourglassSharp } from 'ionicons/icons';
@@ -17,7 +17,8 @@ declare var window: any
 const MassTransfer: React.FC = () => {
 
   // Parámetros del router
-  const { name } = useParams<{ name: string; }>();
+  //const { name } = useParams<{ name: string; }>();
+  let path = window.location.pathname.replace(/\//,'').replace(/\/+$/, '');
 
   // Modal
   const [isOpen, setIsOpen] = useState(false);
@@ -273,14 +274,14 @@ signer.setProvider(keeper);
                 </IonButton>
               </IonContent>
           </IonModal>
-          <IonTitle>{name}</IonTitle>
+          <IonTitle>{path}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonItemDivider></IonItemDivider>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">{name}</IonTitle>
+            <IonTitle size="large">{path}</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonList>

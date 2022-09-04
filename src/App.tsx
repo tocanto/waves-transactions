@@ -3,6 +3,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import MassTransfer from './pages/MassTransfer';
+import KeeperSwap from './pages/KeeperSwap';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,10 +34,13 @@ const App: React.FC = () => {
         <IonSplitPane contentId="main">
           <Menu />
           <IonRouterOutlet id="main">
-            <Route path="/" exact={true}>
+          <Route path="/" exact={true}>
               <Redirect to="/MassTransfer" />
             </Route>
-            <Route path="/:name" exact={true}>
+            <Route path="/KeeperSwap" exact={true}>
+              <KeeperSwap />
+            </Route>
+            <Route path="/MassTransfer" exact={true}>
               <MassTransfer />
             </Route>
           </IonRouterOutlet>
